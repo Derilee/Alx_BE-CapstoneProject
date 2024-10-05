@@ -13,8 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from decouple import config
 from datetime import timedelta
-import os
-import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +28,7 @@ SECRET_KEY = 'django-insecure-ha_81c4c1a16vcvj($oq*chv(0bhrel@7axhvx^*tvu*37qmjq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['inventory-management-api.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,7 +78,6 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -114,12 +112,12 @@ WSGI_APPLICATION = 'Inventory_Management_API.wsgi.application'
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
+#         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'inventory',
-#         'USER': 'derilee',
+#         'USER': 'postgres',
 #         'PASSWORD': 'Derilee#1',
 #         'HOST': 'localhost',
-#         'PORT': '3306',
+#         'PORT': '5432',
 #     }
 # }
 
@@ -135,9 +133,6 @@ DATABASES = {
     }
 }
 
-# Heroku database configuration
-if 'DATABASE_URL' in os.environ:
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -173,8 +168,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

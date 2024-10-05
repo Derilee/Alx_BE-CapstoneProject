@@ -9,7 +9,7 @@ class InventoryItemSerializer(serializers.ModelSerializer):
     owner = UserSerializer(read_only=True) #read-only means the owner field cannot be modified through the API.
     class Meta:
         model = InventoryItem
-        fields = ['id', 'name', 'description', 'quantity', 'price', 'category', 'date_added', 'last_updated', 'owner']
+        fields = ['name', 'description', 'quantity', 'price', 'category', 'date_added', 'last_updated', 'owner']
 
     #a method to validate price can't be a negative value
     def validate_price(self, value):
