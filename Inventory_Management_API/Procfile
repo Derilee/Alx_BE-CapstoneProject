@@ -1,1 +1,1 @@
-web: gunicorn Inventory_Management_API.wsgi
+web: gunicorn Inventory_Management_API/Inventory_Management_API/.wsgi
