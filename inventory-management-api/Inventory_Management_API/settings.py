@@ -15,8 +15,8 @@ pymysql.install_as_MySQLdb()
 from pathlib import Path
 # from decouple import config
 import os
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 from datetime import timedelta
 
 
