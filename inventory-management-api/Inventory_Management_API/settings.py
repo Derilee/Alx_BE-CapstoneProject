@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-ha_81c4c1a16vcvj($oq*chv(0bhrel@7axhvx^*tvu*37qmjq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['derileeinventory.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -83,6 +83,7 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,6 +124,17 @@ WSGI_APPLICATION = 'Inventory_Management_API.wsgi.application'
 #         'PASSWORD': 'Derilee#1',
 #         'HOST': 'localhost',
 #         'PORT': '5432',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'derileeinventory$default',
+#         'USER': 'derileeinventory',
+#         'PASSWORD': 'DerileePassword',
+#         'HOST': 'derileeinventory.mysql.pythonanywhere-services.com',
+#         'PORT': '3306',
 #     }
 # }
 
@@ -187,6 +199,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
