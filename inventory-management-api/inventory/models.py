@@ -17,6 +17,7 @@ class InventoryItem(models.Model):
     date_added = models.DateTimeField(auto_now_add=True) #auto_now_add means the date field can not be modified
     last_updated = models.DateTimeField(auto_now=True) #auto_now means the date can be modified on each update
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='inventory_items') #this field establishes a many to one relationship between the InventoryItem and the User.
+    #Anytime an inventory item is created, this field stores the user who created the inventory as the owner
 
     #a string representation method that makes the name field readable and displays it when printing the model
     def __str__(self):
@@ -52,4 +53,9 @@ def inventory_change_history(sender, instance, created, **kwargs):
             old_quantity=instance.old_quantity, #save the previous quantity
             new_quantity=instance.quantity #save the new quantity
         )
+
+# class InventoryCategories(models.Model):
+#     item = models.ForeignKey(InventoryItem, on_delete=models.CASCADE, related_name='category')
+#     category = models.CharField(max_length=200)
+    
 

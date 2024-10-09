@@ -12,6 +12,7 @@ class InventoryItemFilter(filters.FilterSet):
     class Meta:
         model = InventoryItem
         fields = {
+            #'category':['iexact']
             'price': ['lte', 'gte'], #filter price less than or greater than an amount
         }
 

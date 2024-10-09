@@ -32,3 +32,6 @@ class InventoryCurrentLevelsSerializer(serializers.ModelSerializer):
         model = InventoryItem
         fields = ['name', 'quantity']
 
+# class InventoryCategorySerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = InventoryCategories
