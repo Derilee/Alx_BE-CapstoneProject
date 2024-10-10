@@ -116,28 +116,6 @@ WSGI_APPLICATION = 'Inventory_Management_API.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'inventory',
-#         'USER': 'postgres',
-#         'PASSWORD': 'Derilee#1',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'derileeinventory$default',
-#         'USER': 'derileeinventory',
-#         'PASSWORD': 'DerileePassword',
-#         'HOST': 'derileeinventory.mysql.pythonanywhere-services.com',
-#         'PORT': '3306',
-#     }
-# }
-
 #env postgresDB
 # DATABASES = {
 #     'default': {
