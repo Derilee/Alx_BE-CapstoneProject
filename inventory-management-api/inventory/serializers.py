@@ -20,7 +20,7 @@ class InventoryItemSerializer(serializers.ModelSerializer):
 
 #Serializes the Inventory Change History model
 class InventoryChangeHistorySerializer(serializers.ModelSerializer):
-    changed_by = UserSerializer(read_only=True) #uses UserSerializer to display the details of who made the change
+    changed_by = UserSerializer(read_only=True) #uses UserSerializer to display the details of the user who made the change
     class Meta:
         model = InventoryChangeHistory
         fields = ['item', 'old_quantity', 'new_quantity', 'change_date', 'changed_by']
@@ -31,7 +31,3 @@ class InventoryCurrentLevelsSerializer(serializers.ModelSerializer):
     class Meta:
         model = InventoryItem
         fields = ['name', 'quantity']
-
-# class InventoryCategorySerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = InventoryCategories

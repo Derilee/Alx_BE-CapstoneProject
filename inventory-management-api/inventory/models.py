@@ -54,8 +54,3 @@ def inventory_change_history(sender, instance, created, **kwargs):
             new_quantity=instance.quantity #save the new quantity
         )
 
-# class InventoryCategories(models.Model):
-#     item = models.ForeignKey(InventoryItem, on_delete=models.CASCADE, related_name='category')
-#     category = models.CharField(max_length=200)
-    
-

@@ -15,12 +15,12 @@ class InventoryItemPagination(PageNumberPagination):
     page_size = 10
 
 
-#checks if the user is the owner of the inventory
+#checks if the user is the owner of the inventory. 
 class IsOwner(BasePermission):
     def has_object_permission(self, request, view, obj):
         return obj.owner == request.user
-
-
+    
+    
 #ApiView to create inventory item
 class InventoryItemCreateView(generics.CreateAPIView):
     serializer_class = InventoryItemSerializer
