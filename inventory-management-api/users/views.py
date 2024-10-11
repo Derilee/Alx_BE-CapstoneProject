@@ -23,6 +23,7 @@ class ProfileView(generics.RetrieveUpdateAPIView):
     serializer_class = ProfileSerializer
     permission_classes = [IsAuthenticated]
 
+    #gets and returns the profile of the current user
     def get_object(self):
         return self.request.user.profile
 
