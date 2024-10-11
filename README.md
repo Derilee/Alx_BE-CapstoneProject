@@ -38,8 +38,8 @@ This API has been successfully deployed. You can access it at [derileeinventory.
    - **Note**: Keep your `refresh_token` commented in your JSON body for easy access when trying to get a new access token:
      ```json
      //  {  
-     "refresh_token": "your_refresh_token"
-     }
+    // "refresh_token": "your_refresh_token"
+    // } 
      ```
 
 4. **Access and Update Profile**
