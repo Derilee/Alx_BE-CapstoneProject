@@ -1,8 +1,14 @@
 # BE Capstone Project: Inventory Management API
 
+Project overview [projectoverview] (https://docs.google.com/document/d/1Y5hHwtOigUp6WtNfdKdv6OSNRjg0PD_CDTdS6dH32wo/edit?usp=sharing)
+
+System Architecture [systemarchitecture] (https://docs.google.com/presentation/d/1WVV4KCBadyCuSuwgqXPougI4gQFzfRDxsG1-YGM3weg/edit?usp=sharing)
+
+API Database Design [modeldesign](https://docs.google.com/presentation/d/1PyI_o8pEeeyUAOhczz6SH_-tSPVoxQxXfcqA9VHSQwA/edit?usp=sharing)
+
 This API has been successfully deployed. You can access it at [derileeinventory.pythonanywhere.com](https://derileeinventory.pythonanywhere.com)
 
-ER Diagram [erdiagram](https://docs.google.com/document/d/1Kw6gXOyjE6MdMDzzvUKalf4Pi-RB-s7KO1JhYjZV5S0/edit?usp=sharing)
+
 
 ## How to Use on Postman
 
