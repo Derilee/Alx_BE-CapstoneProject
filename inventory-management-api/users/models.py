@@ -10,6 +10,7 @@ class Profile(models.Model):
     position = models.CharField(max_length=50)
     profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
     
+    #a string representation method that makes the username field readable and displays it when printing the model
     def __str__(self):
         return self.user.username
 

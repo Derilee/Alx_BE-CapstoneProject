@@ -1,6 +1,7 @@
 # BE Capstone Project: Inventory Management API
 
 This API has been successfully deployed. You can access it at [derileeinventory.pythonanywhere.com](https://derileeinventory.pythonanywhere.com)
+ER Diagram [erdiagram](https://docs.google.com/document/d/1Kw6gXOyjE6MdMDzzvUKalf4Pi-RB-s7KO1JhYjZV5S0/edit?usp=sharing)
 
 ## How to Use on Postman
 

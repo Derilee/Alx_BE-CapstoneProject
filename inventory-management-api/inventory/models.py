@@ -27,8 +27,8 @@ class InventoryItem(models.Model):
 #To track changes in the quantity field, before saving an InventoryItem, store the quantity as old_quantity to track changes
 @receiver(pre_save, sender=InventoryItem)
 def old_quantity_change(sender, instance, **kwargs):
-    if instance.pk: #check if the instance exist in the DB
-        old_instance = InventoryItem.objects.get(pk=instance.pk) #if the instance exist, get the instance
+    if instance.pk: #check if the inventory item exist in the DB
+        old_instance = InventoryItem.objects.get(pk=instance.pk) #get the current version of the item from the DB
         instance.old_quantity = old_instance.quantity #store the gotten quantity as old quantity
 
 

@@ -30,7 +30,7 @@ class ProfileView(generics.RetrieveUpdateAPIView):
 
 #login view to handle user login and token refresh for each session and returns a refresh token and an access token
 class LoginView(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [AllowAny] #allows anyone to access the login view
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
         if serializer.is_valid():
