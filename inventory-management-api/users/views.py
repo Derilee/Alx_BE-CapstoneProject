@@ -41,7 +41,7 @@ class LoginView(APIView):
         return Response(serializer.errors, status=status.HTTP_401_UNAUTHORIZED)
 
 
-#logout view to handle user logout and token refresh and blacklist
+#logout view to handle user logout and token refresh and blacklist 
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
     def post(self, request):
