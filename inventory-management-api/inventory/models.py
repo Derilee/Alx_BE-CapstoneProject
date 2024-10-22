@@ -32,7 +32,7 @@ def old_quantity_change(sender, instance, **kwargs):
         instance.old_quantity = old_instance.quantity #store the gotten quantity as old quantity
 
 
-#Inventory change history model with its field 
+#Inventory change history model with its field
 class InventoryChangeHistory(models.Model):
     item = models.ForeignKey(InventoryItem, on_delete=models.CASCADE, related_name='items_log')
     changed_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_change')
