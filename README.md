@@ -1,4 +1,4 @@
-# BE Capstone Project: Inventory Management API
+# ALX_BE Capstone Project: Inventory Management API
 
 Project overview [projectoverview](https://docs.google.com/document/d/1Y5hHwtOigUp6WtNfdKdv6OSNRjg0PD_CDTdS6dH32wo/edit?usp=sharing)
 
